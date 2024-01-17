@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ${APP_CONTAINER_NAME}
+    restart: always
+    ports:
+      - ${APPLICATION_PORT}:${APPLICATION_PORT}
+    env_file:
+      - .env
+    networks:
+      - shared_bridge
+    volumes:
+      - "./:/src"
+volumes:
+  app-data:
+    driver: local
+networks:
+  shared_bridge:
+    driver: bridge
