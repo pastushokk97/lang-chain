@@ -36,4 +36,4 @@ In order to set up the project locally, some actions need to be done. The follow
 3. Install the dependencies using `npm ci`
 4. Create a copy of the `.env.example` file and rename it to `.env`
 5. Start the application `npm run start:dev`
-6. Visit swagger documentation `http://localhost:{port}/api/documentation`
+6. Visit swagger documentation `http://localhost:{port}/api/swagger`
